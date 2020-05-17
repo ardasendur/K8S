@@ -1,0 +1,11 @@
+K8S effective Command:
+kubectl get events
+kubectl delete deployments <Deployment_Name>
+kubeclt delete service <Service_Name>
+kubectl delete pods <Pod_Name>
+kubectl scale --replica <number_of_replicas> deployment/<name_of_deployment>
+kubectl get rc (getting replica set)
+kubectl get deployments
+kubectl describe deployment <name>
+Expose the deployments:
+kubectl expose deployment ....
