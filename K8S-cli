@@ -1,18 +1,1 @@
-K8S effective Command:
-kubectl get events
-kubectl delete deployments <Deployment_Name>
-kubeclt delete service <Service_Name>
-kubectl delete pod <Pod_Name>
-kubectl scale --replica <number_of_replicas> deployment/<name_of_deployment>
-kubectl get rc (getting replica set)
-kubectl get deployments
-kubectl describe deployment <name>
-kubectl get nodes
-kubectl get pods --all-namespaces
-kubectl get pods --all-namespaces -o wide (list all pods in the cluster in detail
-kubectl get namespaces
-kubectl describe pod 
 
-
-Expose the deployments:
-kubectl expose deployment ....
