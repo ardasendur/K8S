@@ -1,0 +1,40 @@
+Core Concepts
+Master Node : 
+ - > etcd (DB of cluster)
+ - > kube api server (external user operation)
+ - > kube-scheduler
+ - > controller-manager (node-controller , replication controller)
+ Master : plan,schedule,control and manage 
+ Worker Node: 
+  -> kubelet ( kube api server talk with kubelet)
+  -> kube-proxy (provide communication between nodes)
+  -> Container run time (docker ,rocket)
+
+ ETCD:
+  - key-value store 
+   Install ETCD
+      Download binaries : curl -L https://github.com/etcd-io/etcd/releases/download/v3.3.11/etcdv3.3.11-linux-amd64.tar.gz -o etcd-v3.3.11-linux-amd64.tar.gz
+      Extract : tar xzvf etcd-v3.3.11-linux-amd64.tar.gz
+      Run ETCD Service : ./etcd - 
+   - > Nodes, Pods, Configs,Secrets,Accounts,Roles,Bindings,Others information store in etcd
+   - > Every info whenever you call kubectl get command is from etcd server.
+   - > default port for etcd is : 2379
+   - > You can install etcd two ways : manual or kubeadm
+  Kubernetess Api Server: 
+    1- Auth user
+    2- Validate request
+    3- Retrieve data
+    4- Update ETCD
+    5- Scheduler (continiously monitors api server and realize that any pods with no assigned nodes)
+    6- Kubelet
+    7- ETCD update
+To summarize: the kube api-server is responsible for Authenticating and validating request,retriving data
+In fact kube api server is the only component that interacts directly with etcd datastore 
+View api-server opitons : cat /etc/kubernetess/manifest/kube-apiserver.yaml
+ps aux | grep kube-apiserver
+
+Kube Controller Manager : 
+ - A controller is a process that continiously monitos the state of various components within the system
+ - Node controller is responsible for monitoring the status of the nodes and taking necassary action (keep application runnig)
+ - Replication controller is responsible to hold the system desired state.
+ 
