@@ -38,3 +38,7 @@ Kube Controller Manager :
  - Node controller is responsible for monitoring the status of the nodes and taking necassary action (keep application runnig)
  - Replication controller is responsible to hold the system desired state.
  
+- kubeadm does not deploy  kubelets
+Kube Proxy: 
+Each node in kubernetess cluster can reach any other nodes in cluster.
+If the app is exposed with servie, they can talk with the name of the service
