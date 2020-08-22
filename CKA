@@ -42,3 +42,6 @@ Kube Controller Manager :
 Kube Proxy: 
 Each node in kubernetess cluster can reach any other nodes in cluster.
 If the app is exposed with servie, they can talk with the name of the service
+
+YAML:
+ - kind is a type object
