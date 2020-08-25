@@ -45,3 +45,21 @@ If the app is exposed with servie, they can talk with the name of the service
 
 YAML:
  - kind is a type object
+Replica Set: 
+ - kubectl scale replicaset --replicas=2 <Name of Replica Set>
+Deployment: (It is kubernetess object)
+ - kubectl create -f deployment
+ - kubectl get deployments
+ - kubectl get replicaset
+ - kubectl get pods
+ - kubectl get all
+ Tips : 
+  kubectl run --generato=run-pod/v1 nginx --image=nginx
+  Generate POD manifest yaml - > kubectl run --generator=run-pod/v1 nginx --image=nginx  --dry-run-o yaml
+To get number of  pods or ns :
+ kubectl get pods --no-headers | wc -l
+
+If pods are in same namespace , they can speak with each other with name
+Otherwise, they can reach it by using , pod + ns+svc+cluster+local
+ 
+ 
