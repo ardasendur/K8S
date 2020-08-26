@@ -1,1 +1,2 @@
 
+grep -A3 (find and get 3 line after result)
