@@ -62,4 +62,11 @@ To get number of  pods or ns :
 If pods are in same namespace , they can speak with each other with name
 Otherwise, they can reach it by using , pod + ns+svc+cluster+local
  
- 
+ Daemon Set : 
+     Daemon set ensures that one copy of the pods is always present all nodes in the cluster.
+     Daemon set is best fit fr monitoring and logs viewer.
+     Kube proxy is using deamon set acuttaly ,it spread all nodes in cluster.
+     kubectl create deamonset
+     kubectl describe daemonset
+     kubectl get ds
+     
