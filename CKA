@@ -69,4 +69,5 @@ Otherwise, they can reach it by using , pod + ns+svc+cluster+local
      kubectl create deamonset
      kubectl describe daemonset
      kubectl get ds
-     
+  
+  Daemon set and  static pod ignored for kube-scheduler
