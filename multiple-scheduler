@@ -1,0 +1,8 @@
+- Kubeadm tool deploy scheduler inside /etc/kubernetess/manifest/kube-scheduler.yaml
+ Command part is important (adding --scheduler-name="")
+ --leader-elect-option:
+ --lock-object-nanme: 
+- To understand which scheduler do it event : 
+   kubectl get events (Reason and Source of event)
+- To view log of scheduler logs
+    kubectl logs -f  <custom-scheduler> --name-sapce=kube-system
