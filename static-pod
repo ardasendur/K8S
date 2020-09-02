@@ -1,0 +1,6 @@
+- Most of the time static pod has name suffix with node name
+- Kubelet config file is located: /var/lib/kubelet/config.yaml
+- To specifcy command use: kubectl run ... --command sleep 1000
+- Static pod are managed directly by the kubelet daemon on a specific npde, without api server obersving them
+- Oberserving staticpod behavior docker ps
+- kubectl run --generator=run-pod/v1 www-1 --image=nginx:1.16 creating pod for kubectl version 1.18
