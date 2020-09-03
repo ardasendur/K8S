@@ -1,0 +1,12 @@
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+kubectl rollout undo deployment/myapp-deployment 
+there are two type of deployment strategy : 
+ 1- recreate 
+ 2- rolling update
+To see it, kubectl describe deployment  strategy type 
+Change the image of deployment:
+    kubectl set image deployment nginx=nginx:1.9.1
+    
+Rollback
+   kubectl rollout undo deployment/myapp-deployment
