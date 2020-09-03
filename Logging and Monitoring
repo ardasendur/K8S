@@ -1,0 +1,17 @@
+Monitor Cluster
+   - > Metric Server , Prometheus ,Elastic Stack ,Data Dog, dynatrace ,heapster(Deprecated)
+ One metric server for per kubernetess cluster
+ Kubelet has one component which name is cAdvisor(container advisor)
+ 
+ minikube addons enable metrics-server
+ kubectl top node ->  performance metric for node
+ kubectl top pod -> performance metric for pod
+ 
+ Download the kubernetess metric server
+  git clone ....
+  kubectl create -f .
+  
+  kubectl logs -f pod
+  One pod  can have two container and you you should specified container name 
+ 
+  kubectl logs pod -c <ContainerName>
