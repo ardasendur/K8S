@@ -1,0 +1,24 @@
+Normally:
+   docker run -e APP=blue
+env properties inside yaml it is 
+    env:
+       -name: APP_COLOR
+        value: blue
+
+Config Maps: config maps are used to pass configuration data in the form of key value pair in kubernetess
+ConfigMap:
+     APP_COLOR: blue
+     APP_MODE: prod
+There are two ways to it : 
+   1 - Create a config map
+   2- Inject it them
+   
+Imperative  - > kubectl create configmap  <config-name> --from-literal=<key>=<value>
+Decrelative - > kubectl apply -f ..
+kubectl get configmap
+kubectl describe configmap
+
+It is under the container part.
+envFrom: 
+   - configMapRef:
+        name: app-config
