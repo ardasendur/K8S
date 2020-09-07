@@ -1,0 +1,5 @@
+1- OS Upgrade 
+   Pod evicition timeout - >
+   kubectl cordon node-01 - > mark as node no scheduler 
+   kubctl uncordon node-01
+   kubectl drain node-01 - kill the existing pods by the way
