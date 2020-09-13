@@ -1,0 +1,28 @@
+1 - Identify kubectl command
+2 - Familiarize with JSON output
+3 - From the JSON PATH query ($ not mandatory)
+4 - kubectl get pods -o=josnpath='{ .items[0].spec.containers[0].image }'
+
+To merge two commmands
+ 
+ Merge : 
+  kubectl get nodes -o jsonpath={.items[*].metadata.name}{.itemsn[*].status.capacity.cpu}
+ 
+ To new line: 
+  
+  kubectl get nodes -o jsonpath={.items[*].metadata.name}{"\n"}{.itemsn[*].status.capacity.cpu}
+
+Loops- Range
+    For each node 
+      Print the naode name \t print cpu count \n
+     end for 
+   
+  'range .items[*]'
+     {.metadata.name} .... = > Single line
+   'end'
+   
+   kubectl get nodes -o=custom-columuns=<COLUMN NAME> : <JSON PATH>
+   kubectl get nodes -o=custom-columns=NODE:.metadata.name,CPU:.status.capacity
+   
+ Sort by opitons:
+ kubectl get nodes --sort-by=status.capacity.cpu
