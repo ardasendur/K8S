@@ -1,0 +1,26 @@
+kubectl get nodes (gives us release version)
+Note that: 
+ kube-api-server
+ Controller-manager
+ Kube-scheduler
+ kubelet
+ kube-proxy
+ kubectl  
+they are all same version 
+
+ETCD Cluster and CoreDNS are can be different version
+
+
+Cluster Upgrade Process in Kubernetess
+Focus on. on core control plane components
+Kube api server version should be greater than other component version
+
+Kube-apiserver - > X -> v1.10
+Controller-manager  -> X-1 -> v1.9
+kube-scheduler - > X-1 
+Kubelet and kube-proxy -> X-2
+
+Upgrade process: 
+  - First upgrade the master node
+  - Second upgrade the worker node
+  
