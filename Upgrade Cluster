@@ -1,0 +1,8 @@
+ - kubectl version --short
+ - kubeadm upgrade plan
+ - Upgrade master components 
+ - kubectl version 
+ - apt install kubeadm=1.18.0-00
+ - apt install kubelet=1.18.0.00
+ - kubeadm upgrade apply v1.18.0
+ - ssh node01
