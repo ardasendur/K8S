@@ -1,0 +1,20 @@
+Backup candidates: 
+    - Resource Configuration  
+    - ETCD Cluster -> store the state of resources
+      etcd cluster is stored in master node
+      
+     etcdctl is command line client for etcd 
+     If you want to take a snapchot for etcd
+       - etcdctl snapshot save -h
+       - etcdctl snapshot restore -h
+       
+To get etcd version: 
+  Check image of etcd
+
+To take snapshot : 
+   -- cacert 
+   -- cert
+   -- key
+   --endpoints
+   
+   etcdctl member list for test certificated
