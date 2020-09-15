@@ -17,4 +17,8 @@ To take snapshot :
    -- key
    --endpoints
    
+   ETCDCTL_API=3 etcdtl member list
+   ETCDCTL_API=3 etcdctl snapshot save ...
+   ETCDCTL_API=3 etcdctl snapshot status 
    etcdctl member list for test certificated
+    
