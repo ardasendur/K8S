@@ -1,0 +1,22 @@
+Device A ip - > 192.168.1.10
+Device B ip - > 192.168.1.11
+Network -> 192.168.1.0
+
+Switch : Create a connect to connect A and B devices 
+
+Switch command: 
+    - > ip link ( To connect network)
+    - > ip addr add  
+    
+Router :  A Router helps connect two networks together. It is an intelligent device. conencts two seperate network
+To see routing configuration :
+      -> route 
+      ->  ip route add 
+  
+ ip route -> view route tabşe
+ ip route add adding route table
+ 
+ DNS
+   cat >> /etc/hosts
+   192.168.1.11
+  
