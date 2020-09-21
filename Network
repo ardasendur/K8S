@@ -20,3 +20,15 @@ To see routing configuration :
    cat >> /etc/hosts
    192.168.1.11
   
+Network command: 
+   - >   To learn network interface 
+         ifconfig -a
+         car /etc  /network/interface
+  ->  To learn mac adress of 
+            iplink
+  -> To learn node ip and mac adress 
+            ssh node01 ifconfig ens3
+  -> To learn status of network interface
+            ssh node01 ip link
+            
+   -> netstat -natulp | grep kube-scheduler
