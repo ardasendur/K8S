@@ -1,3 +1,11 @@
 To remove taint:
 kubectl taint node <NodeName> key=value:Type-
 grep -A3 (find and get 3 line after result)
+
+
+Cluster IP service : only accessable within cluster.
+Node port range : 30000-32767
+Node port service accessable for external call 
+  IP address of Node
+  Node port
+Node port service is not secure
