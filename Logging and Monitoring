@@ -14,4 +14,4 @@ Monitor Cluster
   kubectl logs -f pod
   One pod  can have two container and you you should specified container name 
  
-  kubectl logs pod -c <ContainerName>
+  kubectl logs POD_NAME -c <ContainerName>
