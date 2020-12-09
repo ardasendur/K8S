@@ -1,1 +1,11 @@
 kubectl create configmap <config-map_name> --from-literal=Key=VaLue
+kubectl create configmap <config-map_name> --from-file=<Name of file>
+kubectl get configmaps
+kubectl describe configmaps
+Inject env variable from configmaps:
+  spec:
+     containers:
+     -name
+      envFrom:
+        - configMaps:
+              name:
