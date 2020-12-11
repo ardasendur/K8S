@@ -27,6 +27,8 @@ Loops- Range
  Sort by opitons:
  kubectl get nodes --sort-by=status.capacity.cpu
 
+kubectl get po --sort-by='{.status.startTime}' -o custom-columns=IP:.status.podIP,Name:.metadata.name
+
 NOTE: --custom-columns and--sort-by  dont use .item[*] in query
 
 
