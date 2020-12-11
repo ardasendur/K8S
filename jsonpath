@@ -28,3 +28,6 @@ Loops- Range
  kubectl get nodes --sort-by=status.capacity.cpu
 
 NOTE: --custom-columns and--sort-by  dont use .item[*] in query
+
+
+
