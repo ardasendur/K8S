@@ -20,6 +20,9 @@ Master Node :
    - > Every info whenever you call kubectl get command is from etcd server.
    - > default port for etcd is : 2379
    - > You can install etcd two ways : manual or kubeadm
+   - > etcdctl id the cli tool used to intract with etcd
+   - > ETCDCTL can intract with etcd server using 2 api version 2 and version 3.
+   - > export ETCDCTL_API=3
   Kubernetess Api Server: 
     1- Auth user
     2- Validate request
@@ -31,14 +34,18 @@ Master Node :
 To summarize: the kube api-server is responsible for Authenticating and validating request,retriving data
 In fact kube api server is the only component that interacts directly with etcd datastore 
 View api-server opitons : cat /etc/kubernetess/manifest/kube-apiserver.yaml
-ps aux | grep kube-apiserver
+ps -aux | grep kube-apiserver
 
 Kube Controller Manager : 
- - A controller is a process that continiously monitos the state of various components within the system
+ - A controller is a process that continiously monitors the state of various components within the system
  - Node controller is responsible for monitoring the status of the nodes and taking necassary action (keep application runnig)
  - Replication controller is responsible to hold the system desired state.
- 
 - kubeadm does not deploy  kubelets
+- The node controller checks the status of the nodes every 5 seconds. (node monitor period : 5s)
+- Node monitor grace period : 40s
+- Kubernetess has many controller like (Deploymnet, Namespace,Endpoint,Job,CronJob etc.)
+- When you install the k8s controller manager the different controllers get installed  as well
+
 Kube Proxy: 
 Each node in kubernetess cluster can reach any other nodes in cluster.
 If the app is exposed with servie, they can talk with the name of the service
