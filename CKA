@@ -50,6 +50,9 @@ Kube Proxy:
 Each node in kubernetess cluster can reach any other nodes in cluster.
 If the app is exposed with servie, they can talk with the name of the service
 
+Multi-Container Pods:
+  - > Two containers can communicate  each other as "localhost" ,they share the same network namespace
+
 YAML:
  - kind is a type object
 Replica Set: 
