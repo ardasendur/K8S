@@ -1,0 +1,11 @@
+Namespace is provided isolation between resources.
+<Service Name> <Namespace><Service><domain>
+db-service.dev.svc.cluster.local
+
+Service type: 
+Nodeport: nodeport (Range:30000-32767) 
+port: service port
+targetPort : pod port
+
+If you specify target port it specifies for port
+If you provide nodePort it gives allocated available port 30000-32767 
