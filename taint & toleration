@@ -1,0 +1,17 @@
+node -> taint
+pods -> toleration
+kubectl taint node nodeName key=value:TaintEffect
+TaintEffect:
+  NoSchedule
+  PreferNoSchedule
+  NoExecute
+Toleration:
+  adding inside spec section
+  tolerations:
+  - key:""
+    operator:"Equal"
+    value: ""
+    effect: "NoSchedule"
+  
+ taint and toleration not guanratied that pods goes to specific nodes.
+ Taint and toleration not tell the pod specific node.Instead it tells the node to only accept with certain toleration.
