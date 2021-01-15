@@ -1,0 +1,21 @@
+-> limit and requestes are set for each container within the pod.
+-> What happens exceed the specified limit 
+  In case of CPU ----> throttle A container cannot use more CPU resources than its limit
+  In the case of Memory ----->  A container can use the exceed memory , cosume more memeory terminated.
+
+Inside spec section
+  resources:
+      requests: 
+          memory:
+          cpu:
+      limits:
+
+Remember, you CANNOT edit specifications of an existing POD other than the below.
+
+spec.containers[*].image
+
+spec.initContainers[*].image
+
+spec.activeDeadlineSeconds
+
+spec.tolerations
