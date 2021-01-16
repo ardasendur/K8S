@@ -18,7 +18,14 @@ Decrelative - > kubectl apply -f ..
 kubectl get configmap
 kubectl describe configmap
 
-It is under the container part.
+Use envFrom to define all of the ConfigMap's data as container environment variables. The key from the ConfigMap becomes the environment variable name in the Pod.
 envFrom: 
    - configMapRef:
         name: app-config
+   
+   env:
+        - name: SPECIAL_LEVEL_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: special-config
+              key: special.how
