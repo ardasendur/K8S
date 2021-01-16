@@ -4,7 +4,7 @@ env properties inside yaml it is
     env:
        -name: APP_COLOR
         value: blue
-
+env variables are getting from plain , secret  and config map.
 Config Maps: config maps are used to pass configuration data in the form of key value pair in kubernetess
 ConfigMap:
      APP_COLOR: blue
