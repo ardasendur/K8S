@@ -1,0 +1,10 @@
+Important notes:
+ - No component has higher version than kube api server version.
+ 
+If you deploy your cluster wşth cloud provider, it is just one click
+If you deploy your cluster with kubeadm , it helps you to plan upgrade
+kubeadm upgrade plan 
+kubedm upgrade apply
+
+
+kubectl get no, you can see the version
