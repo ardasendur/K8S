@@ -1,0 +1,7 @@
+- > the time for pod  to come back online pod evicition timeout
+kubectl-controller-manager pod-eviction timeout 5 minutes
+Drain : evicted pod and create new pod from other node.
+Cordon: Simply marks a node unscheduleable, Unlike drain it does not terminate or move the pods other node
+
+kubectl drain node1 --ignore-deamonset
+If a pod has no connection between replşca set, you have to force to drain and pod can be lost forever.
