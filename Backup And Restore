@@ -17,8 +17,27 @@ To take snapshot :
    -- key
    --endpoints
    
+ 
+   export ETCDCTL_API=3
    ETCDCTL_API=3 etcdtl member list
    ETCDCTL_API=3 etcdctl snapshot save ...
    ETCDCTL_API=3 etcdctl snapshot status 
    etcdctl member list for test certificated
     
+    
+Since our ETCD database is TLS-Enabled, the following options are mandatory:
+
+--cacert                                                verify certificates of TLS-enabled secure servers using this CA bundle
+
+--cert                                                    identify secure client using this TLS certificate file
+
+--endpoints=[127.0.0.1:2379]          This is the default as ETCD is running on master node and exposed on localhost 2379.
+
+--key                                                      identify secure client using this TLS key file
+
+
+ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+     --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key \
+     snapshot save /opt/snapshot-pre-boot.db
+     
+https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/practice-questions-answers/cluster-maintenance/backup-etcd/etcd-backup-and-restore.md
