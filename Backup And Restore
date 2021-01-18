@@ -11,13 +11,16 @@ Backup candidates:
 To get etcd version: 
   Check image of etcd
 
+To get certificate, (cert ->server sertificate)
+Learn certificate path from kubectl get po <etc-d> -n kube-system //generally static pod
+
 To take snapshot : 
    -- cacert 
    -- cert
-   -- key
+   -- key (server key)
    --endpoints
    
- 
+
    export ETCDCTL_API=3
    ETCDCTL_API=3 etcdtl member list
    ETCDCTL_API=3 etcdctl snapshot save ...
