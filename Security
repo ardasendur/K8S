@@ -1,0 +1,8 @@
+Generate Key: 
+  openssl genrsa -out admin.key 2048
+
+Certificate Signing Request:
+  openssl req -new -key admin.key -subj "/CN=kube-admin/o=system:masters"   -out admin.csr
+ 
+ Sign Key:
+    openssl x509 -req -in admin.csr -CA ca.cert -CAkey ca.key -out admin.crt
