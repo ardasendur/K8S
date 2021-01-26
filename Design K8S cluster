@@ -1,0 +1,16 @@
+Purpose:
+   Education 
+      minikube
+      Singlenode cluster with kubeadm
+      
+      
+ Hosting Production App:
+   Kubeadm AWS Kops GCp 
+   
+ Cloud or OnPrem:
+    Use Kubeadm for on-prem
+    Kops for AWS
+    AKS for azure
+ 
+ 
+ Note:  Master nodes can host workloads
