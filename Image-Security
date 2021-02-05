@@ -1,0 +1,9 @@
+image: docker.io / nginx / nginx
+       (registry) (user/account) (image)
+       
+If you want to use private docker registry :
+   you should create secret and it should include docker username,secret,password
+   kubectl create secret docker-registry  <Name of secret>
+   
+    imagePullSecrets:
+      - name: <Name of secret>
