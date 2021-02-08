@@ -1,0 +1,14 @@
+Network Security:
+  pods are communicate each other any additional settings like routes
+  Normally all pods easy make communication between in same cluster
+  Network policy ingrees or engress
+  Network policy
+  
+  Kube-router calico rommana weavene-net support network policy
+  Flannel does not support network policy
+  
+  Ingrees can be part of from namepsace, pod and outisde of cluster with IP address
+  Engress can be external (out of cluster)
+  
+  kubectl get networkpolicy
+  kubectl get netwol
