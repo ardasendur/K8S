@@ -1,0 +1,31 @@
+ps -aux | grep kubelet | grep network -> to learn network plugin
+Binaries for cni ps -aux | grepkubelet | 
+Learn cni plugin -> cd /etc/cni/net.d/
+
+IP Management:
+    DHCP
+    host-local
+
+
+ip address show weave
+ip address r 
+
+iptables -L -t net | grep db-service
+cat /var/log/kube-proxy.log
+
+
+To see node port range: 
+    ip a command then check ens3 
+    
+to see pod port range:
+  kubectl -n kube-syatem logs <POD_NAME> -c weave //ipalloc
+ 
+ 
+to see service cidr range
+  navigate kube-api server staticpod then check it.
+
+
+CoreDNS cat /etc/coredns/Corefile
+
+
+host <service_name>
