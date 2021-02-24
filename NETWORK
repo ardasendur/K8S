@@ -1,0 +1,18 @@
+To see network interface : 
+    ip link
+    ifconfig  -a
+    for ubuntu cat /etv/network/interfaces
+   
+ To see ipadress
+    ifconfig ens3 <Network interface>
+To learn mac address
+    ip link 
+    
+ ssh node01 ifconfig ens3
+ 
+ To learn which route :
+ ip r 
+ 
+ what is the port listening :
+ netstat -natulp | grep * | grep LISTEN
+   
