@@ -1,0 +1,15 @@
+"metadata.name",
+"metadata.namespace",
+"spec.nodeName",
+"spec.restartPolicy",
+"spec.schedulerName",
+"spec.serviceAccountName",
+"status.phase",
+"status.podIP",
+"status.podIPs",
+"status.nominatedNodeName"
+
+
+
+$kubectl get pods --field-selector=metadata.name=nginx-web-server
+$kubectl get pods --field-selector=metadata.namespace=default
